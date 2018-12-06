@@ -6,12 +6,13 @@ type Accounts struct {
 }
 
 type Account struct {
+	UserName    string `json:"UserName,omitempty"`
+	Password    string `json:"Password,omitempty"`
 	Description string `json:"Description,omitempty"`
 	Id          string `json:"Id,omitempty"`
 	Name        string `json:"Name,omitempty"`
 	Oem         Oem    `json:"Oem,omitempty"`
 	Type        string `json:"Type,omitempty"`
-	UserName    string `json:"UserName,omitempty"`
 }
 
 type Oem struct {
@@ -30,5 +31,5 @@ type Privileges struct {
 	UserConfigPriv           bool `json:"UserConfigPriv,omitempty"`
 	VirtualMediaPriv         bool `json:"VirtualMediaPriv,omitempty"`
 	VirtualPowerAndResetPriv bool `json:"VirtualPowerAndResetPriv,omitempty"`
-	iLOConfigPriv            bool `json:"iLOConfigPriv,omitempty"`
+	ILOConfigPriv            bool `json:"iLOConfigPriv,omitempty"`
 }
